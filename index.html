@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Translator App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="app-header">
+    <h1><i class="fa-solid fa-language"></i> Translator</h1>
+    <div class="header-buttons">
+      <button id="toggleMode"><i class="fa-solid fa-moon"></i></button>
+      <button id="clearHistory"><i class="fa-solid fa-trash"></i></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <textarea class="from-text" maxlength="500" placeholder="Enter text here"></textarea>
+    <div class="char-counter"><span id="charCount">0</span>/500</div>
+
+    <div class="controls">
+      <select id="fromLang"></select>
+      <i class="fa-solid fa-right-left exchange"></i>
+      <select id="toLang"></select>
+    </div>
+
+    <button class="translate-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Translate</button>
+    <div class="loading hidden"><i class="fa-solid fa-spinner fa-spin"></i> Translating...</div>
+
+    <textarea class="to-text" placeholder="Translation" readonly></textarea>
+
+    <div class="icons">
+      <i id="copyFrom" class="fa-solid fa-copy" title="Copy input"></i>
+      <i id="speakFrom" class="fa-solid fa-volume-high" title="Speak input"></i>
+      <i id="copyTo" class="fa-solid fa-copy" title="Copy output"></i>
+      <i id="speakTo" class="fa-solid fa-volume-high" title="Speak output"></i>
+    </div>
+
+    <h2>History</h2>
+    <ul id="historyList"></ul>
+  </main>
+
+  <div id="toast" class="toast hidden">Copied to clipboard!</div>
+
+  <script src="countries.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
