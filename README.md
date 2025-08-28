@@ -45,4 +45,3 @@ The **Language Translator App** is a lightweight, interactive, and user-friendly
 
 ---
 
-👉 Would you like me to make this **research-style (AI/NLP-focused like the weather app)** or **simple project-style (for GitHub portfolio)**?
